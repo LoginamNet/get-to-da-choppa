@@ -1,0 +1,143 @@
+/* --main------------------------------------------------------------------- */
+
+.page {
+    background-color: rgb(27, 27, 27);
+}
+
+.page-main {
+    margin: 10px 0;
+    height: auto;
+    background-image: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+.page-wrapper {
+    gap: 10px;
+}
+
+/* --player------------------------------------------------------------------- */
+
+.page-main .player-container__player {
+    position: sticky;
+    top: 10px;
+    z-index: 200;
+    gap: 10px;
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(83, 83, 83);
+    border-radius: 15px;
+    box-shadow: 0 0 2px 4px black;
+}
+
+/* --collection------------------------------------------------------------------- */
+
+.films-collection {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    width: 100%;
+}
+
+.film__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    width: 32%;
+    padding: 1%;
+    background-color: rgb(250, 249, 243);
+    border: 2px dashed grey;
+    border-radius: 15px;
+}
+
+.film__description-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.film__image {
+    aspect-ratio: 3/2;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 6px solid rgb(147, 161, 144);
+    transform: rotate(-1deg);
+    transition: 0.5s;
+}
+
+.film__main-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.film__name {
+    font-size: 1.3rem;
+}
+
+.film__year {
+    width: fit-content;
+    height: fit-content;
+    padding: 0 10px;
+    font-size: 1.3rem;
+    background-color: coral;
+}
+
+.film__description {
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+}
+
+.load-button {
+    width: 100%;
+    min-height: 30px;
+    max-height: fit-content;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #fc5a50;
+}
+
+.film__container:hover .film__image {
+    transform: rotate(0deg);
+}
+
+/* --media------------------------------------------------------------------- */
+
+@media (max-width: 940px) {
+
+    .load-button {
+        min-height: 55px;
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .film__container {
+        width: 49%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .film__container {
+        width: 100%;
+        padding: 15px;
+    }
+
+}
+
+@media (max-width: 420px) {
+    
+    .page-header,
+    .page-footer {
+        height: 40px;
+    }
+    
+}

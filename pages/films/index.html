@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTDC! - Films</title>
+    <meta name="description" content="Collections of all quiz films">
+    <link rel="stylesheet" href="../../styles/common.css">
+    <link rel="stylesheet" href="../../styles/header.css">
+    <link rel="stylesheet" href="./films.css">
+    <link rel="stylesheet" href="../../styles/footer.css">
+    <link rel="stylesheet" href="../../styles/player.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../../assets/favicon.ico">
+</head>
+<body class="page page_no-scroll">
+    <div class="page-preloader"></div>
+    <header class="page-header">
+        <div class="page-wrapper">
+            <div class="page-logo__containeer">
+                <div class="page-logo" onclick="window.location.href = `https://rolling-scopes-school.github.io/loginamnet-JSFE2022Q3/get-to-the-choppa/pages/main/`"></div>
+                <a class="page-logo__text" href="https://rolling-scopes-school.github.io/loginamnet-JSFE2022Q3/get-to-the-choppa/pages/main/">Get to da choppa!</a>
+            </div>
+            <nav class="page-nav">
+                <li class="page-nav__item" onclick="window.location.href = `https://rolling-scopes-school.github.io/loginamnet-JSFE2022Q3/get-to-the-choppa/pages/main/`">About</li>
+                <li class="page-nav__item" onclick="window.location.href = `https://rolling-scopes-school.github.io/loginamnet-JSFE2022Q3/get-to-the-choppa/pages/victorine/`">Quiz</li>
+                <li class="page-nav__item page-nav__item_selected">Films</li>
+                <li class="page-nav__item page-nav__languages">
+                    <div class="nav__languages">
+                        <span class="nav__languages-en language-set">EN</span>
+                        <span class="nav__languages-divider">I</span>
+                        <span class="nav__languages-ru">РУ</span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </header>
+    <main class="page-main">
+        <div class="page-wrapper">
+            <div class="player-container__player">
+                <span class="player__now-playing"></span>
+                <div class="player__buttons">
+                    <button class="button player__play-button button_disabled"></button>
+                    <div class="player__volume">
+                        <button class="button player__volume-button"></button>
+                        <div class="volume__volume-bar">
+                            <div class="volume__volume-level"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="player__timeline-bar">
+                    <div class="player__progress-bar"></div>
+                    <div class="player__time-container">
+                        <div class="time-container__current-time">00:00</div>
+                        <div class="time-container__song-length">00:00</div>
+                    </div>
+                </div>
+            </div>
+            <section class="films-collection"></section>
+        </div>
+    </main>
+    <footer class="page-footer">
+        <div class="page-wrapper">
+            <div class="footer__logos">
+                <img class="logos__image" src="../../assets/icons/rs_school_logo.svg" alt="RsSchool logo" onclick="window.location.href = `https://rs.school/js/`">
+                <img class="logos__image" src="../../assets/icons/github-logo.svg" alt="GitHub logo" onclick="window.location.href = `https://github.com/LoginamNet`">
+            </div>
+            <span class="footer__year">2022</span>
+        </div>
+    </footer>
+    <script type="module" src="./films.js"></script>
+</body>
+</html>

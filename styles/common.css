@@ -1,0 +1,169 @@
+/* --main------------------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+ol {
+    padding-left: 20px;
+}
+
+ol > li {
+    list-style: decimal;
+}
+
+a {
+    text-decoration: none;
+}
+
+.page {
+    position: relative;
+    overflow: auto;
+}
+
+/* --preloader------------------------------------------------------------------- */
+
+.page_no-scroll {
+    overflow-y: hidden;
+}
+
+.page-preloader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-image: url(../assets/gifs/cassete.gif);
+    background-position: center;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    opacity: 1;
+    transition: 0.3s;
+}
+
+.page-preloader_hidden {
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* --common------------------------------------------------------------------- */
+
+.page-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    font-family: 'Oswald', sans-serif;
+    background-image: url(../assets/images/vhs.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 10px;
+    width: 1160px;
+    height: 88%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(245, 241, 219);
+    border-radius: 15px;
+}
+
+/* --button------------------------------------------------------------------- */
+
+.button {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    font-weight: 600;
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: gray;
+    border: 6px solid rgb(158, 158, 158);
+    border-left: 4px solid rgb(37, 37, 37);
+    border-bottom: 4px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button_disabled {
+    filter: grayscale(0.7);
+    background-color: rgb(102, 102, 102);
+    border: 4px solid rgb(27, 27, 27);
+    border-left: 4px solid rgb(85, 85, 85);
+    border-bottom: 4px solid rgb(51, 51, 51);
+    pointer-events: none;
+    cursor: default;
+}
+
+.button:hover {
+    filter: contrast(1.3);
+    background-color: rgb(153, 152, 152);
+    border: 6px solid rgb(194, 194, 194);
+    border-left: 4px solid rgb(107, 107, 107);
+    border-bottom: 4px solid rgb(51, 51, 51);
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+/* --media------------------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+
+    .page-wrapper {
+        width: 920px;
+        height: 90%;
+        margin: 0 auto;
+        padding: 15px;
+    }
+
+}
+
+@media (max-width: 940px) {
+
+    .page-wrapper {
+        width: 750px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .page-wrapper {
+        width: 590px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .page-main {
+        height: auto;
+    }
+    
+    .page-wrapper {
+        gap: 10px;
+        width: 90%;
+        margin: 20px 0;
+    }
+
+}

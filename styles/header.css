@@ -1,0 +1,173 @@
+/* --main------------------------------------------------------------------- */
+
+.page-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 5vh;
+    font-family: 'Oswald', sans-serif;
+    background: rgb(58, 87, 69);
+}
+
+.page-header .page-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1160px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+}
+
+/* --logo------------------------------------------------------------------- */
+
+.page-logo__containeer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+}
+
+.page-logo {
+    width: 30px;
+    height: 30px;
+    background-image: url("../assets/icons/helicopter-logo.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.page-logo__text {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    user-select: none;
+    transition: 0.3s;
+}
+
+.page-logo__text:hover {
+    transform: scale(1.1);
+    color: coral;
+}
+
+/* --nav------------------------------------------------------------------- */
+
+.page-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.page-nav__item {
+    padding: 5px;
+    user-select: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.page-nav__item_selected {
+    transform: none;
+    font-weight: 800;
+    color: coral;
+    cursor: default;
+}
+
+
+.page-nav__item:not(.page-nav__item_selected):not(.page-nav__languages):hover {
+    transform: scale(1.1);
+    color: coral;
+}
+
+/* --languages------------------------------------------------------------------- */
+
+.page-nav__languages {
+    cursor: default;
+}
+
+.nav__languages {
+    display: flex;
+    gap: 10px;
+    padding: 0 7px;
+    font-weight: 300;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+.language-set {
+    color: coral;
+    cursor: default;
+}
+
+.nav__languages-en:not(.language-set):hover,
+.nav__languages-ru:not(.language-set):hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* --media------------------------------------------------------------------- */
+
+@media (max-width: 1200px) {
+
+    .page-header .page-wrapper {
+        width: 920px;
+    }
+
+}
+
+@media (max-height: 740px) {
+
+    .page-header {
+        height: 40px;
+    }
+
+}
+
+@media (max-width: 940px) {
+
+    .page-header .page-wrapper {
+        width: 750px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .page-header .page-wrapper {
+        width: 590px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .page-header {
+        height: 7vh;
+    }
+
+    .page-header .page-wrapper {
+        width: 90%;
+    }
+
+    .page-nav {
+        gap: 10px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .page-nav {
+        gap: 1px;
+    }
+
+}
